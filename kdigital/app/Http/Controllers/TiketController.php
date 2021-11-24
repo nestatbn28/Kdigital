@@ -44,7 +44,7 @@ class TiketController extends Controller
     }
     public function buka(Request $request, $number)
     {
-        $tiket=DB::table('tiket')->where('number','=',$number)->get();;
+        $tiket=Tiket::where('number',$number)->first();
         $tiket->message=$request->message;
         $tiket->status='answered';
         if($tiket->save()){
@@ -58,12 +58,12 @@ class TiketController extends Controller
 
     public function tutup($number)
     {
-        $tiket=$tiket=Tiket::find($number);
+        $tiket=Tiket::where('number',$number)->first();
         $tiket->status='closed';
         if($tiket->save()){
             return response()->json([
             "success" => true,
-            "message" => "Tiket berhasil Ditutup."
+            "message" => "Tiket berhasil Ditutup.",
             ]);
        }
     }
