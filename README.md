@@ -60,3 +60,28 @@ POST http://127.0.0.1:8000/api/hapus/{id}
 }
 ```
 
+
+POST http://127.0.0.1:8000/api/membalas/`number`
+
+| Parameter | Type | 
+| :--- | :--- | 
+| `message` | `mediumtext` |
+
+## Responses
+```javascript
+{
+    "success": true,
+    "message": "Tiket berhasil Dibuka."
+}
+```
+
+
+POST http://127.0.0.1:8000/api/menutup/`number`
+
+## Responses
+```javascript
+{
+    "success": true,
+    "message": "Tiket berhasil Ditutup."
+}
+```
