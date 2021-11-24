@@ -1,11 +1,11 @@
 pertama yang kita lakukan adalah membuat create database dengan nama kdigital menggunakan query dibawah ini di sqlyog
-|create database kdigital|
+|`create database kdigital`|
 
 kedua kita migrate database menggunakan cmd di folder kdigital tersebut menggunakan perintah seperti dibawah ini di cmd
-|php artisan migrate|
+|`php artisan migrate`|
 
 ketiga kita run laravel tersebut dengan perintah seperti ini yang kita gunakan di cmd
-|php artisan serve|
+|`php artisan serve`|
 
 
 GET http://127.0.0.1:8000/api/list
